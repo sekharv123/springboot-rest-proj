@@ -23,6 +23,7 @@ public class EmployeeController {
 	// add emp
 	@PostMapping(path = { "/addEmp" })
 	public ResponseEntity<Employee> addEmployee(@RequestBody Employee emp) {
+		System.out.println("Inside addEmp()");
 		Employee employee = employeeService.addEmployee(emp);
 		return new ResponseEntity<Employee>(employee, HttpStatus.OK);
 	}
